@@ -9,10 +9,14 @@ sock.bind('tcp://127.0.0.1:' + port, function(err) {
 	} else {
 		console.log("Bound to port %s", port);
 		setInterval(function(){
-			var message = 'PING' + count++;
+			var topic = 'seconds.ping';
+			var data = {
+				time: new Date().valueOf()
+			};
+			var message = [topic, JSON.stringify(data)].join(' ');
 			console.log('Sending message: %s', message);
 		 	sock.send(message);
-		}, 2500);
+		}, 1000);
 	}
 });
 
