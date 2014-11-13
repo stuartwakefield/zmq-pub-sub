@@ -1,0 +1,10 @@
+{
+  "name": "zmq-test",
+  "version": "0.1.0",
+  "dependencies": {
+    "mustache": "^0.8.2",
+    "express": "^4.10.2",
+    "mocha": "^2.0.1",
+    "zmq": "^2.8.0"
+  }
+}
