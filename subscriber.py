@@ -19,7 +19,7 @@ socket.connect("tcp://127.0.0.1:%s" % port)
 # topics...
 # http://zeromq.github.io/pyzmq/api/zmq.html#zmq.Socket.setsockopt_string
 # http://api.zeromq.org/2-1:zmq-setsockopt
-socket.setsockopt_string(zmq.SUBSCRIBE, '')
+socket.setsockopt_string(zmq.SUBSCRIBE, 'seconds.ping')
 
 while True:
 	data = socket.recv().decode('UTF-8')
